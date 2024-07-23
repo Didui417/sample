@@ -641,16 +641,23 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+/* Services Section */
+/* Services Section */
 .services .icon-box {
-  text-align: left;
+  text-align: center; /* Center the heading */
   border: 1px solid #ebebeb;
-  padding: 80px 20px;
+  padding: 20px;
   transition: all ease-in-out 0.3s;
   background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items to the top */
+  height: 100%;
+  width: 100%;
 }
 
 .services .icon-box .icon {
-  margin: 0 auto;
+  margin: 0 auto 20px;
   width: 64px;
   height: 64px;
   background: #c9e265;
@@ -658,7 +665,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
   transition: 0.3s;
 }
 
@@ -672,6 +678,7 @@ section {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 24px;
+  text-align: center; /* Center the heading */
 }
 
 .services .icon-box h4 a {
@@ -683,10 +690,17 @@ section {
   color: #c9e265;
 }
 
-.services .icon-box p {
-  line-height: 24px;
+.services .icon-box ul {
+  list-style: disc; /* Restore default list points */
+  padding-left: 20px; /* Add padding to align bullets with the text */
+  margin: 0; /* Remove default margin */
+  text-align: left; /* Align list items to the left */
+}
+
+.services .icon-box ul li {
   font-size: 14px;
-  margin-bottom: 0;
+  line-height: 24px;
+  margin-bottom: 10px; /* Space between list items */
 }
 
 .services .icon-box:hover {
@@ -694,6 +708,25 @@ section {
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   transform: translateY(-10px);
 }
+
+.services .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services .col-lg-4,
+.services .col-md-6 {
+  display: flex;
+  align-items: stretch;
+}
+
+.services .col-lg-4 .icon-box,
+.services .col-md-6 .icon-box {
+  flex: 1;
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Cta
